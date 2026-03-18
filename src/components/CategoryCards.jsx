@@ -4,7 +4,7 @@ const cardStyles = {
   character: { background: 'linear-gradient(140deg, #fff1f5, #ffe9d4)' },
   environment: { background: 'linear-gradient(140deg, #eafff5, #daf2ff)' },
   shape: { background: 'linear-gradient(140deg, #eef2ff, #f0e8ff)' },
-  action: { background: 'linear-gradient(140deg, #fff8d8, #ffe9f6)' }
+  stealRemix: { background: 'linear-gradient(140deg, #fff8d8, #ffe9f6)' }
 };
 
 export default function CategoryCards({ categories, onSelect }) {

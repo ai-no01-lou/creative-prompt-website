@@ -11,8 +11,8 @@ export default function PromptPanel({ prompt, onShuffle, onCopy }) {
 
   return (
     <Box className="prompt-box">
-      <Typography className="prompt-text" variant="h5">{prompt}</Typography>
-      <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap sx={{ mt: 1.5 }}>
+      <Typography className="prompt-text" variant="h5" sx={{ textAlign: 'center' }}>{prompt}</Typography>
+      <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap justifyContent="center" sx={{ mt: 1.5 }}>
         <Button variant="contained" onClick={onShuffle} sx={{ borderRadius: 999 }}>✨ Shuffle current</Button>
         <Button variant="outlined" onClick={handleCopy} sx={{ borderRadius: 999 }}>📋 Copy</Button>
       </Stack>

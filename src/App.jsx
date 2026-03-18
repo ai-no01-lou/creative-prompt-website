@@ -35,12 +35,9 @@ export default function App() {
   return (
     <Container maxWidth={false} disableGutters className="app-shell">
       <Box className="surface">
-        <header>
+        <header style={{ textAlign: 'center' }}>
           <Typography variant="h3" sx={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', mb: 0.5 }}>
             Creative Prompt Generator
-          </Typography>
-          <Typography color="text.secondary">
-            Modern, playful, and made for fast sketch warmups.
           </Typography>
         </header>
 

@@ -17,31 +17,49 @@ export const PROMPTS = {
     'energetic', 'tired', 'hopeful', 'suspicious', 'smug', 'lonely', 'excited', 'calm',
     'frustrated', 'jolly', 'anxious', 'fierce', 'gentle', 'mischievous'
   ],
-  environments: [
-    'a tiny shop in a tree', 'underground mushroom village', 'floating island farm',
-    'abandoned robot factory', 'underwater tea house', 'cloud city at sunset',
-    'ancient library in a volcano', 'crystal cave market', 'rooftop garden greenhouse',
-    'haunted carnival at midnight', 'sky whale graveyard', 'lighthouse on an asteroid',
-    'frozen clocktower town', 'neon jungle temple', 'desert oasis library',
-    'canyon full of hanging lanterns', 'sunken cathedral', 'enchanted train station',
-    'moon crater village', 'deep sea post office', 'forest made of glass',
-    'snowy mountaintop shrine', 'volcanic beach city', 'windmill plains at dawn',
-    'cathedral of stars'
+  environmentPlaces: [
+    'treehouse workshop', 'underground mushroom village', 'floating island farm', 'abandoned robot factory',
+    'underwater tea house', 'cloud city', 'volcanic library', 'crystal cave market',
+    'rooftop greenhouse', 'haunted carnival', 'sky whale graveyard', 'asteroid lighthouse',
+    'frozen clocktower town', 'neon jungle temple', 'desert oasis archive', 'lantern canyon',
+    'sunken cathedral', 'enchanted train station', 'moon crater village', 'deep-sea post office'
+  ],
+  environmentMoods: [
+    'at sunrise', 'during a thunderstorm', 'covered in glowing moss', 'mid-renovation',
+    'just after a festival', 'during golden hour', 'with no gravity', 'in total silence',
+    'inside a dream sequence', 'with floating lanterns', 'under a meteor shower', 'during a power outage',
+    'as winter begins', 'with giant flowers in bloom', 'while time is frozen', 'full of tiny robots',
+    'during a magical blackout', 'as mist rolls in', 'lit only by candles', 'right before dawn'
   ],
   shapes: ['circle', 'triangle', 'square', 'star', 'crescent', 'spiral', 'hexagon', 'diamond', 'teardrop', 'wave', 'blob', 'arrow', 'cross', 'zigzag', 'cloud'],
   creatures: ['dragon', 'robot', 'fairy', 'monster', 'alien', 'golem', 'phoenix', 'mermaid', 'centaur', 'chimera', 'spirit', 'slime creature', 'mechanical beast', 'ancient deity'],
-  actions: [
-    'leaping off a crumbling building', 'dancing in the rain', 'arguing with a ghost',
-    'falling asleep mid-battle', 'discovering a hidden door', 'painting a wall at night',
-    'racing through a marketplace', 'hiding under a table', 'reading a forbidden scroll',
-    'cooking over a campfire', 'dueling at dawn', 'catching falling stars',
-    'planting a flag on a mountain', 'surfing on a cloud', 'fighting a giant fish'
+  shapeStyles: [
+    'with paper-cut layers', 'as a stained-glass design', 'made of found objects', 'as a street-art mural',
+    'with cozy storybook vibes', 'as a futuristic blueprint', 'in a bold comic style', 'with watercolor textures',
+    'as an ancient relic', 'with plush toy proportions', 'as a low-poly model', 'in a gothic silhouette'
+  ],
+  stealSources: [
+    'the silhouette language of samurai cinema', 'the color blocking of retro travel posters',
+    'the atmosphere of rainy noir photography', 'the composition rhythm of manga splash pages',
+    'the mood of impressionist plein-air painting', 'the attitude of 90s skate zines',
+    'the shape grammar of Art Deco posters', 'the warmth of children’s book illustrations',
+    'the visual density of baroque paintings', 'the staging of classic Broadway musicals',
+    'the framing of documentary street photography', 'the texture language of stop-motion sets',
+    'the simplicity of Scandinavian toy design', 'the dramatic lighting of Renaissance portraits',
+    'the iconography of vintage tarot cards'
+  ],
+  remixStyles: [
+    'with neon cyberpunk lighting', 'as a cozy pastel scene', 'in maximalist collage style',
+    'as minimalist monochrome linework', 'with brutalist geometric forms', 'as dreamy surrealism',
+    'in playful claymation aesthetics', 'as high-fashion editorial art', 'with glitch-art distortions',
+    'as hand-inked fantasy concept art', 'in low-fi risograph print style', 'as whimsical folk art',
+    'with ultra-clean UI illustration vibes', 'as cinematic epic matte painting', 'in pixel-art retro game style'
   ]
 };
 
 export const CATEGORIES = [
-  { kind: 'character', title: '🐾 Character', subtitle: '[Mood] + [Animal] + [Job]' },
-  { kind: 'environment', title: '🌿 Environment', subtitle: 'Imaginative scene ideas' },
-  { kind: 'shape', title: '🔷 Shape → Creature', subtitle: 'Transform a shape into a creature' },
-  { kind: 'action', title: '⚡ Action / Pose', subtitle: 'Dynamic movement and moments' }
+  { kind: 'character', title: '🐾 Character', subtitle: '[Mood] + [Animal] + [Role]' },
+  { kind: 'environment', title: '🌿 Environment', subtitle: '[Place] + [Atmosphere]' },
+  { kind: 'shape', title: '🔷 Shape → Creature', subtitle: '[Shape] + [Creature] + [Style]' },
+  { kind: 'stealRemix', title: '🧪 Steal & Remix', subtitle: '[Steal Source] + [Remix Style]' }
 ];
