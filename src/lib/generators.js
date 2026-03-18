@@ -1,13 +1,25 @@
-import { PROMPTS } from '../data/prompts';
+import { CATEGORY_SPECS } from '../data/prompts.js';
 
-const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+const SLOT_REGEX = /{{\s*([\w]+)\s*}}/g;
 
-export const generators = {
-  character: () => `${pick(PROMPTS.moods)} + ${pick(PROMPTS.animals)} + ${pick(PROMPTS.jobs)}`,
-  environment: () => `${pick(PROMPTS.environmentPlaces)} + ${pick(PROMPTS.environmentMoods)}`,
-  shape: () => `${pick(PROMPTS.shapes)} + ${pick(PROMPTS.creatures)} + ${pick(PROMPTS.shapeStyles)}`,
-  stealRemix: () => `${pick(PROMPTS.stealSources)} + ${pick(PROMPTS.remixStyles)}`
+const pickFromPool = (pool, rng = Math.random) => {
+  if (!Array.isArray(pool) || pool.length === 0) return '';
+  return pool[Math.floor(rng() * pool.length)];
 };
+
+export const composeFromSpec = (spec, rng = Math.random) => {
+  if (!spec?.template || !spec?.pools) return '';
+
+  const selections = Object.fromEntries(
+    Object.entries(spec.pools).map(([slotName, pool]) => [slotName, pickFromPool(pool, rng)])
+  );
+
+  return spec.template.replace(SLOT_REGEX, (_, slotName) => selections[slotName] ?? '').replace(/\s+/g, ' ').trim();
+};
+
+export const generators = Object.fromEntries(
+  Object.entries(CATEGORY_SPECS).map(([kind, spec]) => [kind, () => composeFromSpec(spec)])
+);
 
 export const generatePrompt = (kind) => generators[kind]?.() ?? '';
 

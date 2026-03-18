@@ -17,6 +17,14 @@ npm run dev
 npm run build
 ```
 
+### Verify combinatorial generators (ELP-34 Build #3)
+
+```bash
+npm run verify:combinatorial
+```
+
+This script validates that all four categories are driven by slot-based combinatorial specs and that **Steal & Remix** always generates exactly one steal source + one remix style.
+
 Build output is generated in `dist/` and served under `/creativeprompt/` base path.
 
 ## Rollout notes
