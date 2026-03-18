@@ -1,49 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creative Prompt Generator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1 class="site-title">✨ Prompt Generator</h1>
-        </header>
-
-        <div class="prompt-box">
-            <p id="prompt-display">Click a category to generate a prompt!</p>
-            <button id="copy-btn" class="copy-btn hidden" title="Copy prompt">📋 Copy</button>
-        </div>
-
-        <div class="categories">
-            <div class="category-block cat-character" data-category="character">
-                <div class="cat-icon">🐾</div>
-                <h2>Character</h2>
-                <p>Animal + Job + Mood</p>
-            </div>
-            <div class="category-block cat-environment" data-category="environment">
-                <div class="cat-icon">🌿</div>
-                <h2>Environment</h2>
-                <p>Imaginative scenes</p>
-            </div>
-            <div class="category-block cat-shape" data-category="shape">
-                <div class="cat-icon">🔷</div>
-                <h2>Shape to Creature</h2>
-                <p>Transform a shape</p>
-            </div>
-            <div class="category-block cat-action" data-category="action">
-                <div class="cat-icon">⚡</div>
-                <h2>Action / Pose</h2>
-                <p>Dynamic moments</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+    <meta
+      name="description"
+      content="Interactive creative prompt generator for character, environment, shape, and action ideas."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
